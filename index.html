@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon clone project</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- <link rel="stylesheet" href="amazon clone.css"> -->
+<style>
+    *{
+    margin: 0px;
+    font-family: Arial;
+    border: border-box;
+
+}
+/* box1 */
+.navbar
+{
+    height: 70px;
+    background-color: #0f1111;
+     color: white;
+     padding: 5px;
+     display: flex;
+     align-items: center;
+    justify-content: space-evenly; 
+     /* position: fixed;  */
+}
+.nav-logo{
+    height: 50px;
+    width: 100px;
+
+}
+.logo{
+    background-image: url("amz-logo.png");
+    background-size: cover; 
+
+    height:60px;
+    width: 230%;
+    align-items: center;
+    
+    background-color: #0f1111;
+     padding-top: 5px;
+    /* position: relative; */
+    align-items: center;
+
+}
+.logo_in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    /* padding-top: 15px; */
+    margin-left: 200px;
+    padding-top: 20px; 
+    position: fixed;
+    top: 0px;
+
+}
+/* .border{
+        border: 1px solid black; } */
+
+.border:hover{
+    border: 1px solid white;
+} 
+/* box2 */
+.nav-address{
+    /* border-width: 130px; */
+}
+
+.add-first{
+    color: #cccccc;
+    font-size: 1rem;
+    margin-left: 175px; 
+}
+.add-second{
+    color: #ffffff;
+    font-size: 1rem;
+     margin-left: 5px ;  
+     /* margin-right: 150px; */
+      /* margin-left: 50px; */
+    font-weight: bold;
+    /* width: 100px; */
+}
+
+ img{
+    height: 45px;
+    width: 45px;
+     margin-left: 155px;
+
+}
+.add-icon{
+    /* color: #ffffff; */
+    display: flex; 
+    align-items: center;
+    /* background-image: url("loc_image.png"); */
+    /* background-size: cover; */
+    /* height: 45px; */
+    /* width: 45px;  */
+      /* margin-left: 155px;  */
+    
+}
+/* .nav-address:hover{
+border: 1px solid white;
+} */
+
+/* box3 */
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    width: 650px;
+    height: 45px;
+    background-color: pink;
+    border-radius: 4px; 
+    margin-left: 25px;
+    
+    
+}
+.search-select{
+  background-color: #f3f3f3;
+  width: 50px;
+  /* margin-left: 10px; */
+  border-top-left-radius : 4px;
+  border-bottom-right-radius: 4px;
+ border: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.search-icon{
+    display: flex;
+    background-image: url("se.webp");
+    background-size: cover;
+    /* height: 40px; */
+    display: flex;
+    width: 65px;
+    justify-content: center; 
+    /* background-color: #ffffff; */
+    background-color: #f08804;
+    border-top-right-radius : 4px;
+    border-bottom-right-radius: 4px;
+    
+
+}
+.search_input{
+    width:100%;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: none;
+}
+
+.nav-search:hover{
+
+    border: 2px solid #f08804;
+}
+/* box4 */
+.india_icon{
+    width: 35px;
+    height: 35px;
+    background-color:#0f1111;
+    background-image: url("flag.png") ;
+    background-size: cover;
+     /* margin-right: 150px; */
+     margin-left: 60px;
+}
+.search1-select{
+    background-color: #0f1111;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    /* margin-right: 750px; */
+     margin-right: 140px ;
+}
+/* .icon-lang{
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+
+} */
+/* box4 */
+/* 
+span{
+    font-size: 0.85rem;
+} */
+/* box5 */
+ /* .cart-icon{
+    background-image: url("nav-cart.png");
+    background-size: cover;
+    background-color: #f3f3f3;
+    height: 55px;
+    width:55px;
+    align-items: center;
+    margin-top: 20px;
+}
+p{
+     margin-left:70px;
+     padding-bottom: 15px;
+     font-weight: bolder;
+}  */
+
+
+/* panel-box */
+
+.panel{
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    /* position: static; */
+}
+.panel-ops p{
+display: inline;
+margin-left: 15px;
+font-weight: 700;
+}
+.panel-ops{
+    width: 70%;
+    font-size: 0.85rem;
+    padding: 20px;
+}
+.panel-deals{
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 5px;
+    
+}
+
+.border:hover{
+    border: 1px solid white;
+} 
+
+.hero-section{
+    background-image: url(hero-sec.png);
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hero-msg{
+    background-color: white;
+    color: #0f1111;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 0.85rem;
+    width: 80%;
+    margin-bottom: 25px;
+}
+.hero-msg a{
+    color: #007185;
+
+}
+/* shop-section */
+.shop-section {
+    display: flex;
+    justify-content: space-evenly; 
+    background-color: #e2e7e2dd;
+   
+}
+.box{
+    border: 2px solid white;
+height: 400px;
+width: 20%;
+background-color: white;
+padding: 10px
+}
+.box-img{
+    height: 355px;
+    background-size: cover;
+}
+.shop-section a{
+    color: #007185;
+    text-decoration: none;
+}
+.box-img1{
+    height: 330px;
+    background-size: cover;
+    /* padding: 10px; */
+}
+.box-img2{
+    height: 330px;
+    background-size: cover;
+    /* padding: 10px; */
+}
+.box-img3{
+    height: 300px;
+    background-size: cover;
+     /* padding-top: 100px;  */
+}
+.box-img4{
+    height: 300px;
+    background-size: cover;
+
+}
+.box1-img1{
+    height: 300px;
+    background-size: cover;
+    /* padding: 10px; */
+}
+.box1-img2{
+    height: 300px;
+    background-size: cover;
+}
+.box1-img3{
+    height: 300px;
+    background-size: cover;
+}
+.box1-img4{
+    height: 300px;
+    background-size: cover;
+}
+.hero-section2{
+    background-image: url(hero_section1.png);
+    background-size: cover;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hero-section3{
+    background-image: url(hero-section3.png);
+    background-size: cover;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/* footer panel */
+footer{
+    margin-top: 15px;
+}
+.foot-panel1{
+    background-color: #37475a;
+    color: white;
+    font-size: 0.85rem;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+}
+.foot-panel1 a{
+    color: #dddddd;
+    text-decoration: none;
+}
+.foot-panel1 a:hover{
+    text-decoration: underline ;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* position: static; */
+}
+.foot-panel2{
+    background-color: #222f3d;
+    color: white;
+    height: 400px;
+    /* display: inline-block; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    /* margin-top: 15px; */
+     
+}
+.foot-panel2 a{
+     /* text-decoration: none;  */
+}
+ul{
+    margin-top: 10px;
+}
+ul a{
+    display: block;
+    align-items: normal;
+     margin-top: 10px; 
+    color: #dddddd;
+    font-size: 0.85rem;
+    /* align-content: center; */
+}
+.foot-panel{
+
+}
+.add-third{
+    background-color: #222f3d;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: none; */
+
+}
+ .a_logo{
+    background-image: url("amz-logo.png");
+    background-size: cover; 
+    margin-right: 100px;
+    /* height: 50px; */
+    /* width: 250%; */
+    height: 60px;
+    /* margin-top: 10px; */
+    width: 200px;
+    /* background-color: #0f1111; */
+    /* padding-top: 1px; */
+    /* position: relative; */
+    /* align-items: center; */
+ }
+ /* i{
+    background-color:none;
+    height: 35px;
+    width: 5px;
+ } */
+.language{
+    height: 50px;
+    width: 150px;
+    background-color: #222f3d;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+}
+.lang-icon
+{
+    width: 50px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-size: 1.5rem;
+
+}
+.add-lang{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white; */
+}
+.border:hover{
+    
+    border: 1px solid white;
+}
+.country{
+    background-color: #222f3d;
+    color: #dddddd;
+    height: 100px;
+    /* height: 100px; */
+    /* margin-: 10px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.95rem;
+    /* margin-left: 5px; */
+    /* padding: 0px 7.2px; */
+    padding:15px;
+    /* text-decoration: underline; */
+    
+
+}
+.country a{
+    color: #dddddd;
+    /* text-underline-position: none; */
+    text-decoration: none;
+    
+} 
+.country a:hover{
+    text-decoration: underline;
+
+}
+.condition{
+    height: 150px;
+    background-color: #131A22;
+    /* color: #dddddd; */
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.condition a{
+    color: #dddddd;
+    text-decoration: none;
+}
+.condition a:hover{
+    color: #dddddd;
+    text-decoration: underline;
+    justify-content: space-evenly;
+    
+
+
+}
+.copyright{
+    height: 100px;
+    color: #dddddd;
+    background-color: #131A22;
+     /* display: flex;  */
+    /* justify-content: space-evenly; */
+    text-align: center;
+     align-items:center; 
+}
+
+</style>
+</head>
+<body>
+   <header>
+<div class="navbar">
+    <div class="nav-logo  ">
+        <div class="logo border"></div>
+        <!-- <h1 class="logo_in ">.in</h1> -->
+    </div>
+<div class="nav-address ">
+    <p class="add-first border">Delivering to pune</p>
+    <div class="add-icon">
+        <img src="loc_image.png">
+        <p class="add-second border">Update Location</p>
+    </div>
+</div>
+<div class="nav-search">
+   <select class="search-select">
+     <option>All</option>
+   </select>
+   <input placeholder="Search Amazon" class="search_input">
+   <div class="search-icon"></div>
+   
+</div>
+
+<div>
+ <div class="india_icon border "></div>
+ </div>
+ <div>
+<select class="search1-select border ">
+    <option><span>EN</span></option>
+</select>
+</div>
+
+<div class="nav-signin border">
+    <p><span>Hello, sign in</span></p>
+    <p><b>Account & Lists</b></p>
+</div>
+
+<div class="nav-return border">
+    <p><span>Returns</span></p>
+    <p class="nav-second"><b>& Orders</b></p>
+</div> 
+ <!-- <div class="nav-cart">
+    <div class="cart-icon"></div>
+<p><b>car</b></p>
+</div>  -->
+</div>
+
+<div class="panel">
+<div class="panel-all border">
+    <!-- <img src="menu_imgs.png" alt="All"> -->
+    <!-- <img src="menu_imgs.png" alt="All">All -->
+    <i class="fa-solid fa-bars"></i><b>All</b>
+    </div>
+<div class="panel-ops ">
+    <p class="border">Today's Deals</p>
+   <p class="border">Customer Service</p>
+   <p class="border">Registry</p>
+   <P class="border">Gift card's</P>
+   <p class="border">Sells</p>
+</div>
+<div class="panel-deals border"><b>Shop Deal's In Electronics</b></div>
+</div>
+   </header>
+   <div class="hero-section">
+    <div class="hero-msg">
+        <p>Your are on amazon.com You can also shop on amazon india for millions of product with fast local delivery. <a href="amazon.in">Click here to go to amazon.in</a></p>
+    </div>
+</div>
+
+<div class="shop-section ">
+    <div class="box1 box">
+        <h2>Today's best Deals.. </h2>
+        <!-- <p class="msgp">See all deals..</p> -->
+        <a href="#">See all deals..</a>
+        <div class="box-img" style="background-image: url('imge-box1.jpg.jpg');"></div>
+
+    </div>
+    <div class="box2 box">
+        <h2> Appliances for your home | Up to 55% off</h2>
+        <!-- <p class="msgp">See all deals..</p> -->
+        <a href="#">See all deals..</a>
+        <div class="box-img1" style="background-image: url('IMG_box2.png.jpg');"></div>
+
+    </div>
+    <div class="box3 box">
+        <h2>  Bestsellers | Up to 60% off
+        </h2>
+        <!-- <a class="msgp"><p>See all deals..</p></a> -->
+        <a href="#">See all deals..</a>
+        <div class="box-img2" style="background-image: url('IMG_box3.png.jpg');"></div>
+ 
+    </div>
+    <div class="box4 box">
+        <h2>   Under ₹699 | Combo packs | Amazon brands & more
+        </h2>
+        <!-- <p class="msgp">See all deals..</p> -->
+        <a href="#">See all deals..</a>
+        <div class="box-img3" style="background-image: url('img-box4.jpg');"></div>
+
+    </div>
+</div>
+<br>
+<br>
+<div class="shop-section ">
+    <div class="box1 box">
+        <h2> Up to 75% off | Headphones </h2>
+        <a href="#">See all deals..</a>
+        <div class="box1-img1" style="background-image: url('img1-box1.png');"></div>
+
+    </div>
+    <div class="box2 box">
+        <h2> Discover TVs by your ideal size | Starting ₹6,999</h2>
+        <!-- <p class="msgp">See all deals..</p> -->
+        <a href="#">See all deals..</a>
+        <div class="box1-img2" style="background-image: url('img1-box2.png');"></div>
+
+    </div>
+    <div class="box3 box">
+        <h2> Extra savings with energy efficient ACs | Up to 50% off </h2>
+        <!-- <a class="msgp"><p>See all deals..</p></a> -->
+        <a href="#">See all deals..</a>
+        <div class="box1-img3" style="background-image: url('img1-box3.png');"></div>
+ 
+    </div>
+    <div class="box4 box">
+        <h2>   Top rated products from new sellers
+        </h2>
+        <!-- <p class="msgp">See all deals..</p> -->
+        <a href="#">See all deals..</a>
+        <div class="box1-img4" style="background-image: url('img1-box4.png');"></div>
+
+    </div>
+</div>
+<br>
+<br>
+<div class="hero-section2"></div>
+<br>
+<br>
+<div class="hero-section3"></div>
+   
+<footer>
+    <div class="foot-panel1">
+   <a href="#"><b>back to top</b></a>
+    </div>
+    <div class="foot-panel2">
+        <ul>
+       <h3> Get to Know Us</h3>
+       <a href="#">About Us</a>
+       <a href="#">Careers</a>
+       <a href="#">Press Releases</a>
+       <a href="#">Amazon Science</a>
+    </ul>
+   <ul>
+        <h3> Connect with Us</h3>
+        <a href="#"> Facebook</a>
+        <a href="#"> Twitter</a>
+        <a href="#"> Instagram</a>
+        <a href="#"> Youtube</a>
+   </ul>
+ <ul>
+        <h3>  Make Money with Us</h3>
+        <a href="#"> Sell on Amazon </a>
+        <a href="#">  Sell under Amazon Accelerator</a>
+        <a href="#">  Amazon Global Selling</a>
+        <a href="#"> Fulfilment by Amazon </a>
+        <a href="#"> Advertise Your Products </a>
+        <a href="#">  Amazon Global Selling</a>
+        <a href="#"> Amazon Pay on Merchants </a>
+ </ul>
+<ul>
+    <h3> Let Us Help You</h3>
+    <a href="#"> COVID-19 and Amazon </a>
+    <a href="#">  Your Account</a>
+    <a href="#">  Returns Centre</a>
+    <a href="#">  100% Purchase Protection </a>
+    <a href="#"> Amazon App Download </a>
+    <a href="#"> Help</a>
+</ul>
+</div>
+<hr>
+<div class="add-third">
+    <div class="a_logo border"></div>
+     <!-- <i class="fa-solid fa-globe "></i> -->
+     <div class="add-lang border">
+     <div class="lang-icon">
+     <i class="fa-solid fa-globe"></i> 
+     </div>
+    <select class="language">
+        <option value="English - EN">English - EN</option>
+        <option value="हिन्दी - HI - अनुवाद">हिन्दी - HI - अनुवाद</option>
+        <option value="தமிழ் - TA - மொழிபெயர்ப்பு">தமிழ் - TA - மொழிபெயர்ப்பு</option>
+        <option value="తెలుగు - TE - అనువాదం">తెలుగు - TE - అనువాదం</option>
+        <option value="मराठी - MR - भाषांतर">मराठी - MR - भाषांतर</option>
+    </select>
+</div>
+
+</div>
+<div class="country">
+    
+   <a href="#">Australia</a>
+   <a href="#">China</a>
+   <a href="#">France</a>
+   <a href="#"> Germany</a>
+   <a href="#"> Italy</a>
+   <a href="#"> Japan</a>
+   <a href="#"> Mexico</a>
+   <a href="#"> Natherland</a>
+   <a href="#"> Poland</a>
+   <a href="#"> Singapore</a>
+   <a href="#"> Spain</a>
+   <a href="#">United Kingdom  </a>
+   <a href="#">  United States</a>
+   <a href="#">  Turkey</a>
+   <a href="#">  United Arab Emirate</a>
+
+    <!-- <button>india</button> -->
+</div>
+<div class="condition">
+<a href="#">Conditions of Use & Sale</a>
+    <a href="#">Privacy Notice </a>
+    <a href="#">Interest-Based Ads</a>
+</div>
+    <div class="copyright">
+<div class="copyr_icon">
+    <i class="fa-regular fa-copyright"></i>
+</div>
+<p>1996-2024,</p>
+<p>Amazon.com,</p>
+<p> Inc. or its affiliates</p>
+
+    
+</div>
+</footer>
+</body>
+</html>
